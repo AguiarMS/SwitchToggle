@@ -8,4 +8,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
+
+  font-weight: 800;
+  font-size: 25px;
 `
