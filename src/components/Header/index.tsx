@@ -1,8 +1,9 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { Container } from './styles'
 import Switch from 'react-switch'
 import { ThemeContext } from 'styled-components'
 import { shade } from 'polished'
+import NavBar from "../navBar";
 
 interface Props {
   toggleTheme(): void;
@@ -10,13 +11,13 @@ interface Props {
 
 const Header: React.FC<Props> = ({ toggleTheme }) => {
 
-    const { colors, title } = useContext(ThemeContext)
+  const { colors, title } = useContext(ThemeContext)
 
 
   return (
-    <Container>
-      Switch Header
 
+    <Container>
+      <NavBar />
       <Switch
         onChange={toggleTheme}
         checked={title === 'dark'}
@@ -29,7 +30,9 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
         onColor={colors.secundary}
       />
     </Container>
+
   )
 }
+
 
 export default Header
