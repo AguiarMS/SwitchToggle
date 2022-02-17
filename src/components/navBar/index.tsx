@@ -1,4 +1,5 @@
 import React from "react";
+import { MyRoutes } from "../../routes/routes";
 import RightNav from "../RightNav";
 import {ContainerStyles} from './styles'
 

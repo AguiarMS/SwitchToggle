@@ -4,6 +4,7 @@ import Switch from 'react-switch'
 import { ThemeContext } from 'styled-components'
 import { shade } from 'polished'
 import NavBar from "../navBar";
+import { MyRoutes } from "../../routes/routes";
 
 interface Props {
   toggleTheme(): void;
@@ -18,6 +19,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 
     <Container>
       <NavBar />
+      
       <Switch
         onChange={toggleTheme}
         checked={title === 'dark'}
